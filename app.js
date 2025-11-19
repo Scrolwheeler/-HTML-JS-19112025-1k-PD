@@ -7,26 +7,17 @@ const podzina = document.getElementById("podzina");
 const Piebilde = document.getElementById("Piebilde");
 
 podzina.addEventListener("click", kmiReikinasana);
-
+garums.value = garums.value / 100
 function kmiReikinasana(){
-    FinalAnswer.innerText = kmi
-    kmi = 0
+    
+    kmi = svars.value / garums.value * garums.value
     if (kmi < 18,5)
-    kmi = svars.value / garums.value * garums.value;
-       // Piebilde.innerText = "Nepietiekama ķermeņa masa"
-    if (kmi > 18,5 , kmi < 24,99)
-        kmi = svars.value / garums.value * garums.value;
-      //  Piebilde.innerText = "Normāla ķermeņa masa"
-    if (kmi > 25 , kmi < 29,99)
-        kmi = svars.value / garums.value * garums.value;
-      //  Piebilde.innerText = "Lieka ķermeņa masa"
+        Piebilde.innerText = "Nepietiekama ķermeņa masa"
+    if (kmi > 18,5 < 24,99)
+        Piebilde.innerText = "Normāla ķermeņa masa"
+    if (kmi > 25 < 29,99)
+        Piebilde.innerText = "Lieka ķermeņa masa"
     if (kmi >= 30)
-        kmi = svars.value / garums.value * garums.value;
-      //  Piebilde.innerText = "Aptaukošanās"
-
-        
-
-
-
+        Piebilde.innerText = "Aptaukošanās"
 
 }
